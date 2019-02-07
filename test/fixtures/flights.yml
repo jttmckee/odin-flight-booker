@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  leaving: 2019-02-07 16:24:46
+  arriving: 2019-02-07 16:24:46
+
+two:
+  leaving: 2019-02-07 16:24:46
+  arriving: 2019-02-07 16:24:46
