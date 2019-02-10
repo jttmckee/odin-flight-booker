@@ -21,7 +21,7 @@ gem 'will_paginate', '3.1.6'
 
 gem 'bootstrap-will_paginate', '1.0.0'
 
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.1.2'
 
 # Use Puma as the app server
 gem 'puma', '3.9.1'
