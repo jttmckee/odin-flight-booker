@@ -21,7 +21,7 @@ gem 'will_paginate', '3.1.6'
 
 gem 'bootstrap-will_paginate', '1.0.0'
 
-gem 'bootstrap-sass', '3.4.0'
+gem 'bootstrap', '~> 4.0.0'
 
 # Use Puma as the app server
 gem 'puma', '3.9.1'
@@ -39,7 +39,7 @@ gem 'turbolinks', '5.0.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.7.0'
 
-gem 'jquery-rails', '4.3.1'
+gem 'jquery-rails', '4.3.3'
 
 gem 'pg', '1.1.4'
 gem 'rb-readline'

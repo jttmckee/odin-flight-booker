@@ -1,0 +1,18 @@
+<h1>
+Your Booking details</h1>
+
+<p>
+<strong>Your Booking Reference:</strong><%= @booking.id %> </p>
+
+<p>
+<strong>  Departing:</strong> <%= @booking.flight.departure_airport.name %><br>
+On: <%= @booking.flight.leaving %>
+</p>
+
+<p>
+<strong> Arriving: </strong> <%= @booking.flight.arrival_airport.name %><br>
+On: <%= @booking.flight.arriving %>
+</p>
+
+<h3>Passengers</h3>
+<%= render @booking.passengers %>

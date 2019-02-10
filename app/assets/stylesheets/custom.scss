@@ -1,4 +1,3 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
 
 .btn-primary {
@@ -10,11 +9,19 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.search label {
+ label {
   color: #008;
+}
+.btn-group-vertical {
 }
 .form-control {
   color: #33C;
+}
+.left-head {
+  float: left;
+}
+.right-head {
+  float: right;
 }
 
 #flights-table {

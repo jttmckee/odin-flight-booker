@@ -18,6 +18,13 @@
       <%= yield %>
 
     </div>
+    <div class="container">
+      <br> <br>
+      <h3>Not a real flight booker</h3>
+      This is an exercise in building a website using forms, including nested forms.  No real flights can or are booked here.
+      See <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms?ref=lnav"> The Odin Project</a>
+      or <a href="https://github.com/jttmckee/odin-flight-booker"> this site's github page</a> for more information.
+    </div>
     <div display = 'block'>
     <br><%= debug(params) if Rails.env.development? %>
 <br><%= session.to_hash.inspect if Rails.env.development?  %>

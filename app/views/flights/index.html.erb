@@ -1,16 +1,16 @@
 <h1>Search for flights</h1>
 <div class="row">
   <% if @flights  && !@flights.empty?
-      position = 'col-md-4 col-md-offset-1'
+      position = 'col-md-4 offset-md-1'
   else
-      position = 'col-md-6 col-md-offset-3'
+      position = 'col-md-6 offset-md-3'
   end
       %>
   <div class= "<%= position %>" >
 
 <h4>1: Search</h4>
 <%= form_tag root_path, method: 'get' do %>
-  <div class="form-group search">
+  <div class="form-group">
   <%= label_tag 'flight[departure_airport_id]', 'Departing from:' %>
   <%= collection_select(:flight,:departure_airport_id,
     @departure_airports, :id, :name,{selected: @departure},
@@ -43,41 +43,32 @@
 
   <div class="col-md-6 col-md-offset-1">
     <h4>2. Choose your flight</h4>
-    <table id='flights-table'>
-    <thead>
-      <td>
+    <div class="left-head">
       <strong>   From:</strong>
-        <em>  <%= @flights.first.departure_airport.name %></em>
-        (<%= @flights.first.departure_airport.code %>)
-      </td>
-      <td>   <strong> To:</strong>
-        <em> <%= @flights.first.arrival_airport.name %> </em>
-          (<%= @flights.first.arrival_airport.code %>)
-      </td>
-    </thead>
-        </table>
+      <em>  <%= @flights.first.departure_airport.name %></em>
+      (<%= @flights.first.departure_airport.code %>)
+    </div>
+    <div class="right-head">
+      <strong> To:</strong>
+      <em> <%= @flights.first.arrival_airport.name %> </em>
+      (<%= @flights.first.arrival_airport.code %>)
+    </div>
+
+
     <%= form_tag new_booking_path, method: 'get' do %>
-    <div class= "btn-group btn-group-toggle" data-toggle = "buttons">
+    <div class= "btn-group-vertical btn-group-toggle form-group"
+      data-toggle = "buttons">
 
       <% @first = true %>
       <%= render @flights %>
 
     </div>
     <%= hidden_field_tag :num_passengers, @num_passengers %>
-    <%= submit_tag "Book #{@num_passengers} passengers" %>
+    <%= submit_tag "Book #{@num_passengers} passengers",
+    class:'btn btn-primary' %>
     <% end %>
   </div>
   <% end %>
 </div>
-<div class="btn-group btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option2" autocomplete="off"> Radio
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option3" autocomplete="off"> Radio
-  </label>
-</div>
+
 <div display = 'block'> </div>
