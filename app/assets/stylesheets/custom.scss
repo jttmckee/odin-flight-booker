@@ -1,0 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.btn-primary {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #007;
+
+}
+
+.search label {
+  color: #008;
+}
+.form-control {
+  color: #33C;
+}
+
+#flights-table {
+  color: #000078;
+  width: 100%;
+}

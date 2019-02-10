@@ -1,0 +1,8 @@
+<label class = "btn btn-dark <%="active" if @first %>">
+<%= radio_button_tag :flight, flight.id, checked = @first %>
+
+<%= flight.leaving.strftime("%d %b %Y %H:%M UTC") %>
+-&gt &#9992 -&gt
+<%= flight.arriving.strftime("%d %b %Y %H:%M UTC") %>
+</label>
+<% @first = false %>

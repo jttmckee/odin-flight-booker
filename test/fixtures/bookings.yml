@@ -1,9 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-LHR:
-  name: 'London'
-  code: 'LHR'
+one:
+  flight: one
 
-MAD:
-  name: 'Madrid'
-  code: 'MAD'
+two:
+  flight: two

@@ -25,8 +25,8 @@ Airport.create(
 )
 
 start = Time.local(2020,1,1)
-finish = Time.local(2020,12,31)
-50.times do
+finish = Time.local(2020,3,31)
+1000.times do
   leaving = start + rand * (finish - start)
   length = 0.4.hours + rand * (18.hours)
   arriving = leaving + length

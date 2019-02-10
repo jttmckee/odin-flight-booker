@@ -21,7 +21,7 @@ gem 'will_paginate', '3.1.6'
 
 gem 'bootstrap-will_paginate', '1.0.0'
 
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '3.4.0'
 
 # Use Puma as the app server
 gem 'puma', '3.9.1'
@@ -40,6 +40,10 @@ gem 'turbolinks', '5.0.1'
 gem 'jbuilder', '2.7.0'
 
 gem 'jquery-rails', '4.3.1'
+
+gem 'pg', '1.1.4'
+gem 'rb-readline'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -49,8 +53,6 @@ gem 'jquery-rails', '4.3.1'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '9.0.6', platform: :mri
   # Adds support for Capybara system testing and selenium driver
@@ -74,7 +76,6 @@ group :test do
   gem 'guard-minitest', '2.4.4'
 end
 group :production do
-  gem 'pg', '0.18.4'
   gem 'fog', '1.42'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
