@@ -70,7 +70,7 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-gem :production do
+group :production do
   gem 'sendgrid-ruby'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
