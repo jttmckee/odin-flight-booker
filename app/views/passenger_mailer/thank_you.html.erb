@@ -1,0 +1,20 @@
+Dear <%= @passenger.name %>, <br>
+<p>
+Thank you for booking your FAKE flight with us.  This is your confirmation.
+</p>
+
+<p>
+<strong>Your Booking Reference:</strong><%= @booking.id %> </p>
+
+<strong>
+<p>Your Flight Details</p>
+</strong>
+<p>
+<strong>  Departing:</strong> <%= @booking.flight.departure_airport.name %><br>
+On: <%= @booking.flight.leaving %>
+</p>
+
+<p>
+<strong> Arriving: </strong> <%= @booking.flight.arrival_airport.name %><br>
+On: <%= @booking.flight.arriving %>
+</p>

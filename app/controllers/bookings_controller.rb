@@ -11,6 +11,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     if @booking.save
       flash[:info] = 'Booking confirmed'
+      @booking.passengers.each do |p|
+        PassengerMailer.with(passenger: p).thank_you.deliver_later
+      end
       redirect_to booking_path(@booking)
     else
       flash.now[:error] = 'Details incorrect'
